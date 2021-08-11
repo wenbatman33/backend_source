@@ -1,45 +1,44 @@
-// Used to configure the general configuration of some components without modifying the components
-
+// 用於配置某些組件的常規配置，而無需修改組件
 import type { SorterResult } from '../components/Table';
 
 export default {
-  // basic-table setting
+  // 表格配置
   table: {
-    // Form interface request general configuration
-    // support xxx.xxx.xxx
+    // 表格接口請求通用配置，可在組件prop覆蓋
+    // 支持 xxx.xxx.xxx格式
     fetchSetting: {
-      // The field name of the current page passed to the background
+      // 傳給後臺的當前頁字段
       pageField: 'page',
-      // The number field name of each page displayed in the background
+      // 傳給後臺的每頁顯示多少條的字段
       sizeField: 'pageSize',
-      // Field name of the form data returned by the interface
+      // 接口返回表格數據的字段
       listField: 'items',
-      // Total number of tables returned by the interface field name
+      // 接口返回表格總數的字段
       totalField: 'total',
     },
-    // Number of pages that can be selected
+    // 可選的分頁選項
     pageSizeOptions: ['10', '50', '80', '100'],
-    // Default display quantity on one page
+    //默認每頁顯示多少條
     defaultPageSize: 10,
-    // Custom general sort function
+    // 默認排序方法
     defaultSortFn: (sortInfo: SorterResult) => {
       const { field, order } = sortInfo;
       return {
-        // The sort field passed to the backend you
+        // 排序字段
         field,
-        // Sorting method passed to the background asc/desc
+        // 排序方式 asc/desc
         order,
       };
     },
-    // Custom general filter function
+    /// 自定義過濾方法
     defaultFilterFn: (data: Partial<Recordable<string[]>>) => {
       return data;
     },
   },
-  // scrollbar setting
+  // 滾動組件配置
   scrollbar: {
-    // Whether to use native scroll bar
-    // After opening, the menu, modal, drawer will change the pop-up scroll bar to native
+    // 是否使用原生滾動樣式
+    // 開啟後，菜單，彈窗，抽屜會使用原生滾動條組件
     native: false,
   },
 };

@@ -7,19 +7,20 @@ export const LOCALE: { [key: string]: LocaleType } = {
 };
 
 export const localeSetting: LocaleSetting = {
+  // 是否顯示語言選擇器
   showPicker: true,
-  // Locale
+  // 當前語言
   locale: LOCALE.ZH_CN,
-  // Default locale
+  // 默認語言
   fallback: LOCALE.ZH_CN,
-  // available Locales
+  // 允許的語言
   availableLocales: [LOCALE.ZH_CN, LOCALE.EN_US],
 };
 
-// locale list
+// 語言列表
 export const localeList: DropMenu[] = [
   {
-    text: '简体中文',
+    text: '簡體中文',
     event: LOCALE.ZH_CN,
   },
   {

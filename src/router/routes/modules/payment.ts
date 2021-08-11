@@ -9,7 +9,7 @@ const payment: AppRouteModule = {
   component: LAYOUT,
   redirect: '/payment/index',
   meta: {
-    icon: 'simple-icons:about-dot-me',
+    icon: 'la:money-bill',
     title: t('routes.payment.title'),
     orderNo: 11,
   },

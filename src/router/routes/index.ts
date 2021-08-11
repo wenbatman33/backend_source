@@ -6,6 +6,7 @@ import { mainOutRoutes } from './mainOut';
 import { PageEnum } from '/@/enums/pageEnum';
 import { t } from '/@/hooks/web/useI18n';
 
+// 相關用法請參照 https://cn.vitejs.dev/guide/features.html#glob-import
 const modules = import.meta.globEager('./modules/**/*.ts');
 
 const routeModuleList: AppRouteModule[] = [];
